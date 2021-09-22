@@ -209,7 +209,7 @@ shinyServer(function(input, output,session) {
     statistic<-input$stat
 
     #create histogram and save it, need to find where stat lies so we can color it
-    temp<-hist(samples,main=paste("Histgram of Sample ",N,"'s data"),xlab="Data Values, y",prob=TRUE)    
+    temp<-hist(samples,main=paste("Histogram of Sample ",N,"'s data"),xlab="Data Values, y",prob=TRUE)    
 
     #calculate value of statistic
     if ((statistic=="Sample Mean")||(statistic=="Standardized Sample Mean")){
@@ -234,7 +234,7 @@ shinyServer(function(input, output,session) {
       clr[index]<-"blue"
     }
       #create histogram
-      hist(samples,main=paste("Histgram of Sample ",N,"'s data"),xlab="Data Values, y",prob=TRUE,col=clr)    
+      hist(samples,main=paste("Histogram of Sample ",N,"'s data"),xlab="Data Values, y",prob=TRUE,col=clr)    
       
   })
 
